@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {width: 200px;height: 200px;background: red}
+
+    </style>
+    <script>
+        function setStyle(name,value) {
+            var oDiv = document.getElementById('div1');
+            oDiv.style[name] = value  // 操作属性的方法 属性的名称可以通过字符串变量随意改变
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="变宽" onclick="setStyle('width','300px')">
+<input type="button" value="变高" onclick="setStyle('height','300px')">
+<input type="button" value="变绿" onclick="setStyle('background','green')">
+<div id="div1"></div>
+</body>
+</html>
