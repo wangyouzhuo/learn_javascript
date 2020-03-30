@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         #tab .active{background: yellow;}
+         #tab li {width:80px;height:100px;background: gray;border: 1px solid #999;}
+    </style>
+    <script>
+        var arr = [
+            'wqewq',
+            '3323141',
+            'sdavsf',
+            'fsadf',
+            'vsv',
+            'sdvasv',
+            'vdasv',
+            'vadsvsv',
+            'avav',
+            'avvsv',
+            '2fsadfd',
+            '3dvfsv'
+        ];
+
+        window.onload=function () {
+            var oDiv = document.getElementById('tab')
+            var oLi  = oDiv.getElementsByTagName('li')
+            var oTxt = oDiv.getElementsByTagName('div')[0]
+
+            for (var i=0;i<oLi.length;i++)
+            {
+                oLi[i].index = i;
+                oLi[i].onmousemove=function () {
+                    for (var i=0;i<oLi;i++)
+                    {
+                        alert(i)
+                        oLi[i].className=''
+                    }
+                    this.className='active'
+                    oTxt.innerHTML= '<h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'</p>';
+                }
+                oLi[i].onmouseleave=function () {
+                    this.className=''
+                    oTxt.innerHTML= '';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="tab" class="calendar">
+    <ul>
+        <li><h2>1</h2><p>JAN</p></li>
+        <li><h2>2</h2><p>FER</p></li>
+        <li><h2>3</h2><p>MAR</p></li>
+        <li><h2>4</h2><p>APR</p></li>
+        <li><h2>5</h2><p>MAY</p></li>
+        <li><h2>6</h2><p>JUN</p></li>
+        <li><h2>7</h2><p>JUL</p></li>
+        <li><h2>8</h2><p>AUG</p></li>
+        <li><h2>9</h2><p>SEP</p></li>
+        <li><h2>10</h2><p>OCT</p></li>
+        <li><h2>11</h2><p>NOV</p></li>
+        <li><h2>12</h2><p>DEC</p></li>
+    </ul>
+    <div class="text">
+
+    </div>
+</div>
+
+</body>
+</html>
