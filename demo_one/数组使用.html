@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 数组的定义方法
+        var a = [1,2,3]
+        var b = new Array(4,5,6)
+
+        // 数组添加元素
+        a.push(4)   // 末尾添加元素
+        a.pop()     // 末尾删除元素
+
+        a.shift()   // 头部删除元素
+        a.unshift(4)// 头部添加元素
+
+        a.splice(2,3) // 从第二位开始 删除第三第四第五个元素
+
+        a.splice(2,0,'a','b','c') // 从第二个位置开始 删除0个元素 并添加abc三个元素
+
+        a.concat(b) // a连接b
+
+        a.join("-") // 把数组的每个元素用"-"进行连接
+
+        a.sort() // 把数组的元素按照字符串排序
+        alert(a)
+
+        arr.sort(function (n1,n2) {
+            if (n1<n2)
+            {
+                return -1
+            }
+            else if (n1>n2)
+            {
+                return 1
+            }
+            else
+            {
+                return 0
+            }
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

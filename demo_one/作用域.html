@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var g_a;
+        function aaa() {
+            var a=12;
+        }
+        function bbb() {
+            alert(a)  //报错 a是局部变量 只能在aaa函数内使用
+        }
+
+        function c() {
+            var b = 12;
+            function d() {
+                alert(b)   // 闭包 子函数可以使用父函数的局部变量
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

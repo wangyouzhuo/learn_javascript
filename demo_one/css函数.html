@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function css() {
+            if(arguments.length==2)
+            {
+                // 获取样式
+                return arguments[0].style[arguments[1]]
+            }
+            else
+            {
+                // 改变样式
+                arguments[0].style[arguments[1]] = arguments[2]
+            }
+
+            function css(obj,name,value) {
+            if(arguments.length==2)
+            {
+                // 获取样式
+                return obj.style[name]
+            }
+            else
+            {
+                // 改变样式
+                obj.style[name] = value
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
